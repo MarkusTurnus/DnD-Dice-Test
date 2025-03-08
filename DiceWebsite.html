@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DnD Dice Roller</title>
+    <script>
+        function pickNumber(max) {
+            let randomNumber = Math.floor(Math.random() * max) + 1;
+            document.getElementById("result").textContent = "Dice Result (1 - " + max + "): " + randomNumber;
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to My DnD Dice Roller</h1>
+    <p>This is a simple webpage using HTML to roll every dice in DnD.</p>
+    <button onclick="pickNumber(4)">Roll a D4 (1-4)</button>
+    <button onclick="pickNumber(6)">Roll a D6 (1-6)</button>
+    <button onclick="pickNumber(8)">Roll a D8 (1-8)</button>
+    <button onclick="pickNumber(10)">Roll a D10 (1-10)</button>
+    <button onclick="pickNumber(12)">Roll a D12 (1-12)</button>
+    <button onclick="pickNumber(20)">Roll a D20 (1-20)</button>
+    <button onclick="pickNumber(100)">Roll Percentile (1-100)</button>
+    <p id="result"></p>
+</body>
+</html>
